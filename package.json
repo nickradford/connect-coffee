@@ -1,0 +1,26 @@
+{
+  'name': 'connect-coffee',
+  'description': 'Automatic compilation and minification for CoffeeScript under Connect',
+  'keywords': ['connect', 'middleware', 'static', 'coffeescript', 'compiler'],
+  'author': 'Trevor Burnham',
+  'email': 'trevorburnham@gmail.com',
+  'homepage': 'http://github.com/TrevorBurnham/connect-coffee',
+  'repository':
+  {
+    'type':'git',
+    'url':'http://github.com/TrevorBurnham/connect-coffee.git'
+  },
+  'licenses': [{'type': 'MIT'}],
+  'version': '0.1.0',
+  'engines': {
+    'node': '>= 0.2.0',
+    'coffee-script': '>= 1.0.0'
+  },
+  'dependencies': {
+    'connect': '>= 0.5.10'
+  },
+  'directories': {
+    'lib': './lib'
+  },
+  'main': './lib/connect-coffee'
+}

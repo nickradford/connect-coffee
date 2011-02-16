@@ -1,0 +1,52 @@
+# connect-coffee
+
+A [connect](http://senchalabs.github.com/connect/) plugin that allows CoffeeScript to be compiled and served as JavaScript.
+
+## Usage
+
+    npm install connect-coffee
+
+Then when creating your Connect (or Express) server instance, give the `connect-coffee` function a directory and pass the result to the `createServer` function. Here's an example that uses `connect-coffee` in conjunction with the popular `staticProvider` module:
+
+    connectCoffee = require 'connect-coffee'
+    
+    app = connect.createServer(
+        connect.staticProvider(__dirname + '/public'),
+        connectCoffee(__dirname + '/public')
+      )
+    
+    app.listen 3000
+
+In this example, calling `http://localhost:3000/favicon.ico` will serve the file `public/favicon.ico`, and calling `http://localhost:3000/myScript.js` will compile `public/myScript.coffee` and serve the result (unless `myScript.js` already exists).
+
+## TODO
+
+This is an early release, and I'm no expert on the intricacies of the Connect framework. So please, head over to the [Issues](http://github.com/TrevorBurnham/connect-coffee) page and raise some—or better yet, fork this project and make some pull requests!
+
+Known stuff-that-should-be-done:
+
+* Fine-grained control over cache expiration
+* Better compilation error handling (growl notifications?)
+* Concatenation/minification
+
+## Copyright and license
+
+Copyright (c) 2011 Trevor Burnham and made available under the [MIT License](http://www.opensource.org/licenses/mit-license.php):
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in
+all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+THE SOFTWARE.

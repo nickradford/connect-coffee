@@ -1,0 +1,1 @@
+alert 'This CoffeeScript is fully operational!'
