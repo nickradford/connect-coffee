@@ -1,32 +1,5 @@
 # connect-coffee
 
-This project is deprecated in favor of the `compiler` plugin that's bundled with [connect](http://senchalabs.github.com/connect/). Its documentation is spotty, but it can be configured like so:
+This project is deprecated in favor of the newer, shinier, and more versatile [connect-assets](https://github.com/TrevorBurnham/connect-assets).
 
-    connect.createServer(
-      connect.compiler(src: coffeeDir, enable: ['coffeescript']),
-      connect.staticProvider(coffeeDir)
-    )
-
-where `coffeeDir` is the path to the directory with your `.coffee` files. Note that it's important that the `staticProvider` come *after* the `compiler`.
-
-## Copyright and license
-
-Copyright (c) 2011 Trevor Burnham and made available under the [MIT License](http://www.opensource.org/licenses/mit-license.php):
-
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
-
-The above copyright notice and this permission notice shall be included in
-all copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
-THE SOFTWARE.
+Note that that previously recommended `compiler` middleware bundled with Connect **will no longer exist in Connect 2.0**.
